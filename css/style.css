@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+}
+/*Classes auxiliares*/
+
+/*Tela de login do Instagram*/
+section.instagram-wrapper {
+    display: flex;
+    align-items: center;/*Alinhamento Vertical Centralizado*/
+    justify-content: start;/*Alinhamento apartir da esquerda para a direita*/
+    width: 60%;
+    min-width: 800px;
+    max-width: 800px;
+    height: 100vh;
+}
+.mobile {
+    display: flex;
+    align-items: center;/*Alinhamento Vertical Centralizado*/
+    justify-content: center;/*Alinhamento Horizontal Centralizado*/
+    width: 50%;
+}
+.mobile img {
+    height: 46rem;
+}
+.content{
+    display: flex;
+    align-items: center;/*Alinhamento Horizontal Centralizado*/
+    justify-content: space-around;/*Items will have space before, between, and after them*/
+    flex-direction: column;/*Tornei o (align-items: Horizontal) e o (justify-content: Vertical). Ou seja inverti tudo*/
+    width: 60%;
+    min-height: 30rem;
+}
+/*Login*/
+.login{
+    display: flex;
+    justify-content: space-between;/*Items will have space between them*/
+    align-items: center;/*Alinhamento Horizontal Centralizado*/
+    flex-direction: column;/*Tornei o (align-items: Horizontal) e o (justify-content: Vertical).*/
+    background-color: white;
+    width: 90%;
+    padding: 30px 40px;
+    border: 1px solid lightgray;
+}
+.login img{
+    height: 4rem;
+    margin-bottom: 15px;
+}
+.login input[type=text], .login input[type=password]{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login input[type=submit]{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    background-color: #B2DFFC;
+    cursor: pointer;
+}
+.login .ou{
+    width: 100%;
+    display: flex;
+    align-items: center;/*Alinhamento Vertical Centralizado*/
+    justify-content: center;/*Alinhamento Horizontal Centralizado*/
+    margin: 20px 0;
+}
+.ou p{
+    margin: 0 20px;
+    color: #999999;
+}
+.ou .-left{
+    width: 150px;
+    height: 1px;
+    background-color: #999999;
+}
+.ou .-right{
+    width: 150px;
+    height: 1px;
+    background-color: #999999;
+}
+.login li{list-style-type: none;margin-bottom: 20px;}
+.login li i{
+    font-size: 20px;
+    color :#385185;
+}
+.login li a{
+    font-size: 16px;
+    font-weight: bold;
+    color :#385185;
+}
+.login a{
+    color: #00376B;
+}
+/*Fim do Login*/
+
+/*Cadastre-se*/
+div.cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 30px 40px;
+    border: 1px solid lightgray;
+    background-color: white;
+    margin-top: 10px;
+}
+/*Fim do cadastro*/
+
+/*Área dos downloads*/
+div.download{
+    width: 90%;
+}
+div.download p{
+    text-align: center;
+    margin: 20px;
+}
+div.download div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.download img{
+    max-width: 150px;
+}
+/*Fim da área dos downloads*/
+
+
+/* Responsivo - media queries*/
+@media screen and (max-width: 880px) {
+    section.instagram-wrapper {
+        display: flex;
+        align-items: center;/*Alinhamento Vertical Centralizado*/
+        justify-content:center;/*Alinhamento Horizontal centralizado*/
+        width: 100%;
+        min-width: 100%;
+        max-width: none;
+    }
+    .content{
+        width: 100%;
+        max-width: 450px;
+}
+    .mobile{
+        display: none;
+    }
+}
+@media screen and (max-width: 450px) {
+    /*Login*/
+    .login{
+        border: 0;
+        background-color: #FAFAFA;
+        width: 100%;
+    }
+    /*Cadastre-se*/
+    div.cadastro{
+        width: 100%;
+        border: 0;
+        background-color: #FAFAFA;
+    }
+    /*Fim do cadastro*/
+
+    /*Área dos downloads*/
+    div.download{
+        width: 100%;
+    }
+    /*Fim da área dos downloads*/
+}
